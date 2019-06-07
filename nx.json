@@ -7,5 +7,21 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "dashboard": {
+      "tags": []
+    },
+    "dashboard-e2e": {
+      "tags": []
+    },
+    "planner-form": {
+      "tags": []
+    },
+    "planner-form-e2e": {
+      "tags": []
+    },
+    "components": {
+      "tags": []
+    }
+  }
 }
