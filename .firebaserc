@@ -5,12 +5,16 @@
   "targets": {
     "eventplannerproject": {
       "hosting": {
-        "prod": [
+        "prod-dashboard": [
           "dashboard-gdgcdoreg",
+        ],
+        "prod-form": [
           "form-gdgcdoreg"
         ],
-        "dev": [
+        "dev-dashboard": [
           "dev-dashboard-gdgcdoreg",
+        ],
+        "dev-form": [
           "dev-form-gdgcdoreg"
         ]
       }

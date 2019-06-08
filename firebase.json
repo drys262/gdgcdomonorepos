@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "prod",
+      "target": "prod-dashboard",
       "public": "dist/apps/dashboard",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "target": "dev",
+      "target": "dev-dashboard",
       "public": "dist/apps/dashboard",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "target": "prod",
+      "target": "prod-form",
       "public": "dist/apps/planner-form",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "target": "dev",
+      "target": "dev-form",
       "public": "dist/apps/planner-form",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [

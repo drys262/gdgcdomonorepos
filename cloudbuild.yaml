@@ -9,4 +9,4 @@ steps:
     args:
       - deploy
       - --debug
-      - --only=hosting:prod
+      - --only=hosting:prod-dashboard,hosting:prod-form
