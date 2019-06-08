@@ -8,10 +8,7 @@ export const App = () => {
   return (
     <div>
       <header style={{ textAlign: 'center' }}>
-        <h1>Welcome to dashboard!</h1>
-        <Button />
-        <Button />
-        <Button />
+        <h1>Welcome to dashboard!!!</h1>
       </header>
     </div>
   );
