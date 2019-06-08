@@ -6,13 +6,13 @@
     "eventplannerproject": {
       "hosting": {
         "prod-dashboard": [
-          "dashboard-gdgcdoreg",
+          "dashboard-gdgcdoreg"
         ],
         "prod-form": [
           "form-gdgcdoreg"
         ],
         "dev-dashboard": [
-          "dev-dashboard-gdgcdoreg",
+          "dev-dashboard-gdgcdoreg"
         ],
         "dev-form": [
           "dev-form-gdgcdoreg"
