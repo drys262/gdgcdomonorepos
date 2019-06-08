@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build', 'dashboard', '--sourceMap=true', '--statsJson']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build', 'planner-form', '--sourceMap=true', '--statsJson']
+  - name: 'gcr.io/$PROJECT_ID/firebase'
+    args:
+      - deploy
+      - --debug
+      - --only=hosting:dev

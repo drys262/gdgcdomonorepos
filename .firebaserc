@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "default": "eventplannerproject"
+  },
+  "targets": {
+    "eventplannerproject": {
+      "hosting": {
+        "prod": [
+          "dashboard-gdgcdoreg",
+          "form-gdgcdoreg"
+        ],
+        "dev": [
+          "dev-dashboard-gdgcdoreg",
+          "dev-form-gdgcdoreg"
+        ]
+      }
+    }
+  }
+}
