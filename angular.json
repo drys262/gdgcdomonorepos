@@ -233,6 +233,108 @@
           }
         }
       }
+    },
+    "gdgfirebasedemo": {
+      "root": "apps/gdgfirebasedemo",
+      "sourceRoot": "apps/gdgfirebasedemo/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/web:build",
+          "options": {
+            "outputPath": "dist/apps/gdgfirebasedemo",
+            "index": "apps/gdgfirebasedemo/src/index.html",
+            "main": "apps/gdgfirebasedemo/src/main.tsx",
+            "polyfills": "apps/gdgfirebasedemo/src/polyfills.ts",
+            "tsConfig": "apps/gdgfirebasedemo/tsconfig.app.json",
+            "assets": [
+              "apps/gdgfirebasedemo/src/favicon.ico",
+              "apps/gdgfirebasedemo/src/assets"
+            ],
+            "styles": ["apps/gdgfirebasedemo/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/gdgfirebasedemo/src/environments/environment.ts",
+                  "with": "apps/gdgfirebasedemo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "gdgfirebasedemo:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "gdgfirebasedemo:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/gdgfirebasedemo/tsconfig.app.json",
+              "apps/gdgfirebasedemo/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/gdgfirebasedemo/jest.config.js",
+            "tsConfig": "apps/gdgfirebasedemo/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "gdgfirebasedemo-e2e": {
+      "root": "apps/gdgfirebasedemo-e2e",
+      "sourceRoot": "apps/gdgfirebasedemo-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/gdgfirebasedemo-e2e/cypress.json",
+            "tsConfig": "apps/gdgfirebasedemo-e2e/tsconfig.e2e.json",
+            "devServerTarget": "gdgfirebasedemo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "gdgfirebasedemo:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/gdgfirebasedemo-e2e/tsconfig.e2e.json"
+          }
+        }
+      }
     }
   },
   "cli": {

@@ -22,6 +22,12 @@
     },
     "components": {
       "tags": []
+    },
+    "gdgfirebasedemo": {
+      "tags": []
+    },
+    "gdgfirebasedemo-e2e": {
+      "tags": []
     }
   }
 }
